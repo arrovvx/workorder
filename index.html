@@ -1,0 +1,58 @@
+<!-- Frontend index.html
+	This code was written using bootstrap, jQuery, and native Javascript.
+	I think other frontend frameworks are overkill for this simple application.
+-->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+	
+	<!-- custom styling for toggle sliding button -->
+	<style>
+		.toggle.ios, .toggle-on.ios, .toggle-off.ios { 
+			border-radius: 20rem; 
+		}
+
+		.toggle.ios .toggle-handle { 
+			border-radius: 20rem; 
+		}
+	</style>
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+	<!-- container to hold filter and sort-by buttons -->
+	<div class="container">
+		<div class="row m-3">
+			<form id="workFilterForm" class="w-100">
+				<input id="name-input" class="form-control" type="text" placeholder="Filter by worker name...">
+				
+			</form>
+		</div>
+		
+		<div class="row">
+			<form id="sortForm" class="col-md-12 text-center">
+				<input id="deadline-input" type="checkbox" checked data-toggle="toggle" data-style="ios" data-on="Earliest First" data-off="Latest First" data-onstyle="danger" data-offstyle="success">
+			</form>
+		</div>
+	</div>
+	
+	<!-- container to hold all the orders -->
+	<div class="container">
+		<div id="workOrderList" class="row mt-4"></div>
+	</div>
+
+    <!-- jQuery for Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <!-- Custom JavaScript -->
+	<script type="application/javascript" src="index.js"></script>
+  </body>
+</html>
